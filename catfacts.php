@@ -1,14 +1,15 @@
 <?php
 
-
 function endSession($words) { 
 	header('Content-type: application/json');
 
 	$open = '{"version": "1.0","sessionAttributes":"","response":{"outputSpeech":{"type": "PlainText","text": "';
-	$close = '"},"shouldEndSession": true}}';
-
+	$card = '"},"card": {"type": "Simple","title": "Cat Fact","content": "';
+        $close = '"},"shouldEndSession": true}}';
 	echo $open;
 	 echo ($words);
+       echo $card;
+         echo ($words);
 	echo $close;
 }
 
